@@ -73,6 +73,11 @@ public class DnsTUI {
       return new CommandeQuitter();
     }
     
+    // Help command
+    if (parts[0].equalsIgnoreCase("aide") || parts[0].equalsIgnoreCase("help")) {
+      return new CommandeAide();
+    }
+    
     // List command: ls [-a] domain
     if (parts[0].equalsIgnoreCase("ls")) {
       return parseListCommand(parts);
